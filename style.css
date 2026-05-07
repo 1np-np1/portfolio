@@ -1,0 +1,141 @@
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+   These are the single source of truth for
+   every color and font used on the site.
+   Change a value here → it updates everywhere.
+═══════════════════════════════════════════ */
+:root {
+  /* Colors */
+  --bg:         #F6F2EA;   /* warm cream background */
+  --ink:        #0A0A0A;   /* near-black for all text */
+  --accent:     #FE3939;   /* the one red — used sparingly */
+  --soft:       rgba(10, 10, 10, 0.50);   /* muted text */
+  --hairline:   rgba(10, 10, 10, 0.14);   /* divider lines */
+
+  /* Fonts */
+  --font-display: "Syne", sans-serif;          /* big headings */
+  --font-mono:    "JetBrains Mono", monospace; /* labels, metadata, body */
+
+  /* Spacing scale — consistent rhythm across sections */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  64px;
+  --space-xl:  96px;
+
+  /* Layout */
+  --gutter: 32px;
+}
+
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+   Clears browser defaults so we start clean.
+═══════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* makes nav links glide instead of jump */
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ═══════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 18px var(--gutter);
+  border-bottom: 1px solid var(--hairline);
+  background: rgba(246, 242, 234, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.nav__logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.nav__links a {
+  color: var(--soft);
+  transition: color 0.2s;
+}
+
+.nav__links a:hover {
+  color: var(--accent);
+}
+
+.nav__clock {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+
+/* ═══════════════════════════════════════════
+   SECTION BASE
+   Shared styles every section inherits.
+═══════════════════════════════════════════ */
+.section {
+  padding: var(--space-xl) var(--gutter);
+  border-bottom: 1px solid var(--hairline);
+  min-height: 200px; /* placeholder so sections are visible while empty */
+}
+
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   On small screens, hide nav links & reduce gutters.
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 20px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+}

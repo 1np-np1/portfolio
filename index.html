@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset= "UFT-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Strange Wedding</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Strange Wedding</title>
+  <meta name="description" content="A Strange Wedding — Techno producer, sound designer, DJ &amp; live performer. Berlin." />
+
+  <!-- Google Fonts: Syne for big display text, JetBrains Mono for labels & metadata -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- All visual styling lives here -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Hello, world - I'm building something</h1>
+
+  <!-- ═══════════════════════════════════════════
+       NAV — sticky top bar, visible on every section
+  ═══════════════════════════════════════════ -->
+  <header class="nav">
+    <div class="nav__logo">A Strange Wedding</div>
+    <nav class="nav__links">
+      <a href="#listen">Listen</a>
+      <a href="#live">Live</a>
+      <a href="#sound-design">Sound Design</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__clock" id="clock">—:—</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       01 · HERO
+       First thing visitors see. Artist name,
+       Further Inward sub-line, live oscilloscope,
+       role tags, and a Listen CTA.
+  ═══════════════════════════════════════════ -->
+  <section id="hero" class="section section--hero">
+    <!-- content coming next session -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       02 · LISTEN
+       SoundCloud embeds + Further Inward mix series block.
+       This is where the music lives.
+  ═══════════════════════════════════════════ -->
+  <section id="listen" class="section section--listen">
+    <!-- content coming -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       03 · LIVE
+       Upcoming shows + past dates.
+  ═══════════════════════════════════════════ -->
+  <section id="live" class="section section--live">
+    <!-- content coming -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       04 · SOUND DESIGN
+       Custom sound design work & commissions.
+  ═══════════════════════════════════════════ -->
+  <section id="sound-design" class="section section--sound-design">
+    <!-- content coming -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       05 · TEACHING
+       Echio classes and music feedback sessions.
+  ═══════════════════════════════════════════ -->
+  <section id="teaching" class="section section--teaching">
+    <!-- content coming -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       06 · ABOUT
+       Bio + full explanation of the Further Inward concept.
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="section section--about">
+    <!-- content coming -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       07 · CONTACT
+       Using <footer> here because it's the last section
+       of the page — semantically correct.
+  ═══════════════════════════════════════════ -->
+  <footer id="contact" class="section section--contact">
+    <!-- content coming -->
+  </footer>
+
+  <!-- All interactive behaviour (oscilloscope, clock, etc.) lives here -->
+  <script src="main.js"></script>
 </body>
 </html>
